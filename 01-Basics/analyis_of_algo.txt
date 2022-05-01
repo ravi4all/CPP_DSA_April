@@ -1,0 +1,19 @@
+Analysis of Algo
+Order of Growth
+=========================
+Asymptotic Analysis
+- without implementing algorithm practically we can express the time and space complexity...
+- because practical implementation may vary from system to system or from programming to programming
+
+Asymptotic Notations
+- Best Case	Omega
+- Average Case	Theta
+- Worst Case	Big O
+
+Analysis of Loops...
+
+
+
+
+
+
