@@ -6,7 +6,7 @@ class ArrayCRUD {
     public:
     int currentSize;
     int n = 5;
-    int arr[5];
+    int arr[5] = {0,0,0,0,0};
     ArrayCRUD(int capacity) {
         currentSize = 0;
     }
@@ -29,22 +29,33 @@ class ArrayCRUD {
     }
 
     void print() {
+        for(int i = 0; i < n; i++) {
+            cout << arr[i] << ", ";
+        }
+    }
+
+    void search() {
 
     }
 
-    int search() {
-
-    }
-
-    void remove() {
-
+    void remove(int index) {
+        if(currentSize == 0) {
+            cout << "Array is Empty...Can't remove element...";
+        }
+        
     }
 
     void update() {
 
     }
-}
+};
 
 int main() {
-
+    ArrayCRUD obj(5);
+    obj.insert(5,0);
+    obj.insert(15,1);
+    obj.insert(11,2);
+    obj.insert(7,3);
+    obj.insert(12,4);
+    obj.print();
 }
