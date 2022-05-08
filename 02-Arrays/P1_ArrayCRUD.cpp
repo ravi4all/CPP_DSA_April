@@ -25,28 +25,53 @@ class ArrayCRUD {
         }
         arr[index] = element;
         currentSize++;
-        cout << "Element Added...";
+        cout << "Element Added..." << "\n";
     }
 
     void print() {
         for(int i = 0; i < n; i++) {
             cout << arr[i] << ", ";
         }
+        cout << "\n";
     }
 
-    void search() {
-
+    int search(int value) {
+        for(int i = 0; i < n; i++) {
+            if(arr[i] == value) {
+                cout << "Element found at index : " << i;
+                return i;
+            }
+        }
+        cout << "Element not found...";
+        return -1;
     }
 
     void remove(int index) {
         if(currentSize == 0) {
             cout << "Array is Empty...Can't remove element...";
+            return;
         }
-        
+
+        for(int i = index; i < currentSize - 1; i++) {
+            arr[i] = arr[i+1];
+        }
+        arr[currentSize-1] = 0;
+        currentSize--;
+        cout << "Element Removed..." << "\n";
+        print();
+
     }
 
-    void update() {
-
+    void update(int valueToSearch, int valueToUpdate) {
+        int index = search(valueToSearch);
+        if(index == -1) {
+            return;
+        }
+        else {
+            arr[index] = valueToUpdate;
+            cout << "Array Updated...";
+            print();
+        }
     }
 };
 
@@ -58,4 +83,8 @@ int main() {
     obj.insert(7,3);
     obj.insert(12,4);
     obj.print();
+
+    obj.remove(3);
+
+    obj.search(11);
 }
