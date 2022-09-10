@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-static int game(int current, int end, int cache[]) {
+int game(int current, int end, int cache[]) {
     if(current == end) {
         return 1;
     }
@@ -21,6 +21,20 @@ static int game(int current, int end, int cache[]) {
     return count;
 }
 
+int tabulation(int start, int end) {
+    int cache[end+1];
+    cache[end] = 1;
+    for(int i = end - 1; i >= 0; i--) {
+        int count = 0;
+        for(int dice = 1; dice <= 6 && dice + i < end + 1; dice++) {
+            count += cache[dice + i];
+        }
+        cache[i] = count;
+    }
+    return cache[start];
+}
+
 int main() {
-    
+    int count = tabulation(0, 10);
+    cout << "Count is : " << count;
 }
