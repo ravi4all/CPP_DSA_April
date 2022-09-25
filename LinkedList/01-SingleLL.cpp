@@ -13,13 +13,25 @@ void printList(Node *head) {
         cout << head->data << ",";
         head = head->next;
     }
+    cout << "\n";
 }
 
-void insertAtBeg(struct Node* head_ref,int data) {
+int getSize(Node *head) {
+    int i = 0;
+    while (head != NULL)
+    {
+        head = head->next;
+        i++;
+    }
+    return i;
+}
+
+Node *insertAtBeg(struct Node* head_ref,int data) {
     Node* newNode = new Node;
     newNode -> data = data;
     newNode -> next = head_ref;
     head_ref = newNode;
+    return head_ref;
 }
 
 void insertAfterNode(struct Node* prev_node, int data) {
@@ -48,13 +60,14 @@ Node *insertAtEnd(struct Node* head_ref,int data) {
 
     if(head_ref == NULL) {
         head_ref = newNode;
-        return;
+        return head_ref;
     }
 
     while(temp->next != NULL) {
         temp = temp->next;
     }
     temp->next = newNode;
+    return temp;
 }
 
 void insertAtAnyPos(int pos, int data) {
@@ -81,7 +94,51 @@ void deleteFromAnyPos(struct Node* head_ref, int pos) {
     temp->next = temp->next->next;
 }
 
+void getMidPoint(struct Node* head_ref) {
+    // int size = getSize(head_ref);
+    // Slow Fast Pointer Approach
+    struct Node *slow = head_ref;
+    struct Node *fast = head_ref;
+    while (fast != NULL && fast->next != NULL)
+    {
+        fast = fast->next->next;
+        slow = slow->next;   
+    }
+    cout << "Mid Point : " << slow->data;
+    
+}
 
+Node *reverseLinkedList(struct Node* head_ref) {
+    if(head_ref == NULL) {
+        cout << "List is empty...";
+        return head_ref;
+    }
+    if(head_ref->next == NULL) {
+        cout << "List contains only one item...";
+        return head_ref;
+    }
+    struct Node *currentNode = head_ref;
+    struct Node *prevNode = NULL;
+    while (currentNode != NULL)
+    {
+        struct Node *nextNode = currentNode->next;
+        currentNode->next = prevNode;
+        prevNode = currentNode;
+        currentNode = nextNode;
+    }
+    head_ref = prevNode;
+    return head_ref;
+}
+
+Node *reverseRec(struct Node *currentNode, struct Node *prevNode) {
+    if(currentNode == NULL) {
+        return prevNode;
+    }
+    struct Node *nextNode = currentNode->next;
+    currentNode->next = prevNode;
+    return reverseRec(nextNode, currentNode);
+
+}
 
 int main() {
     struct Node* head = NULL;
@@ -102,7 +159,10 @@ int main() {
     n2->next = NULL;
 
     printList(head);
-    insertAtBeg(head, 90);
+    head = insertAtBeg(head, 90);
+    printList(head);
+
+    head = reverseLinkedList(head);
     printList(head);
 
 }
