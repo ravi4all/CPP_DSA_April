@@ -16,24 +16,32 @@ Node* newNode(int data) {
     return temp;
 }
 
-void levelOrder(Node *root) {
+void insert(Node *root, int key) {
     if(root == NULL) return;
     queue<Node*> q;
     q.push(root);
     while (q.empty() == false)
     {
         // Get front node from queue and remove it
-        Node *node = q.front();
-        cout << node->data << " ";
+        Node *temp = q.front();
         q.pop();
 
-        if(node->left != NULL) {
-            q.push(node->left);
+        if(temp->left) {
+            temp->left = newNode(key);
+            break;
+        }
+        else {
+            q.push(temp->left);
         }
 
-        if(node->right != NULL) {
-            q.push(node->right);
+        if(temp->right) {
+            temp->right = newNode(key);
+            break;
         }
+        else {
+            q.push(temp->right);
+        }
+        
 
     }
     
