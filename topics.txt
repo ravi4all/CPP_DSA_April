@@ -1,0 +1,350 @@
+1. Count Digits
+2. Prime Number
+3. Sum of Natural Numbers
+4. Missing Numbers
+
+===============================
+5. Number is Palindrome or not : 
+111, 1221, 134431
+
+6. Count Trailing zeros : 
+I/P : 1001200
+O/P : 2
+===============================
+
+7. HCF/GCD and LCM
+HCF - Highest Common Factor
+GCD - Greatest Common Divisor
+
+LCM - Least Common Multiple
+
+Different Ways to find HCF
+- Factorization Method
+- Prime Factorization Method
+- Divsion Method
+
+Order of growth
+Asymptotic Analysis and Notations
+Analysis of Normal Loops
+
+CRUD Opertations on Array
+
+1. Max Element in an Array
+2. Second Largest Element in Array
+3. Span of an Array - Difference b/w the max and min element of array
+4. Checking if array is sorted or not
+5. Reverse an array
+6. Print Bar Chart
+7. Pair Sum
+8. Remove Duplicate Element from Sorted Array
+9. Find Leader Element in Array
+10. Addition of 2 Array
+11. Subtraction of 2 Array
+12. Rotate Array Once
+13. Rotate Array K times
+14. Sort 0 and 1 
+    - [0,1,0,1,1,1,0,0,1,0]
+    - [0,0,0,0,0,1,1,1,1,1]
+15. DNF - Dutch National Flag
+    - [0,1,1,1,1,0,2,2,2,0,0,2,1,0]
+    - [0,0,0,0,0,1,1,1,1,1,2,2,2,2]
+16. Find Missing Number in given n natural numbers
+    - [1,2,3,5,6]
+    - Missing Number : 4
+17. Majority Element - appears more than n/2 of array
+    - arr[] = {2,1,3,4,3,3,3,2,5,3,3};
+    - o/p : 3
+18. Best Time to Buy and Sell Stock
+    - prices = [7,1,5,3,6,4]
+    - O/p = 5
+Pre Computation Technique 
+    - Prefix Min, Prefix Max, Prefix Sum
+    - Suffix Min, Suffix Max, Suffix Sum
+19. Water Trapping Problem
+    - maintain PrefixMax and SuffixMax
+20. Next Greater Element
+    - arr = [3,2,5,2,6,8,5,3,1]
+    - o/p = [5,5,6,6,8,-1,-1,-1,-1]
+======================================
+2D Array
+- Square Matrix => no of rows = no of cols
+- Symmetric Matrix => a[i][j] = ar[j][i]
+- Tri-Diagonal Matrix => we have 3 diagonals
+- Z-Matrix
+- Toeplitz Matrix - diagonal values are same
+
+1. Snake Pattern in Matrix
+2. Transpose
+3. Lucky Number - HW
+4. Matrix Rotate by 90 degree (Anticlock wise) - HW
+5. Sum of upper boundary and lower boundary elements
+6. Spiral Matrix - HW
+    ref- https://leetcode.com/problems/spiral-matrix/
+
+======================================
+String Questions
+
+1. Palindrome String
+2. Substring Palindrome
+3. Subsequences of a string
+4. Check if string is Subsequence of another string
+5. Reverse words in a string
+6. Anagram String
+    - approach 1 : sort and compare - TC : O(N Log N) - HW
+    - approach 2 : maintain one vector - HW
+7. First Unique Character in a String
+8. Sort Characters by Frequency - HW
+    - Ref : https://leetcode.com/problems/sort-characters-by-frequency/
+9. Pattern Matching/Searching
+    I/P : String : "ABCABCD" and Pattern : "ABC"
+    O/P : 0 3
+    - Naive Solution
+    - Rabin Karp
+    - KMP - Knuth Morris Pratt Algorithm
+      - LPS - Longest Prefix and Suffix
+    
+======================================
+
+Recursion
+- when a function calls itself
+- before recursion we should be familiar with working of stack
+- because recursion internally build call stacks
+
+Three concepts needed to solve recursion
+- Base Case (terminating case)
+- Small Problem
+- Processing Logic
+
+Single Branch Recursion
+Multi Branch Recursion
+
+1. Factorial of a number
+2. Head Recursion and Tail Recursion
+3. Print : 5,3,1,2,4
+4. Count Number of zero in a digit
+    I/P : n = 1093004
+    O/P : 3
+5. Reverse a string - HW
+6. Fibonacci Series - 0,1,1,2,5,8,13,21...
+7. Array is sorted or not - HW
+8. Search Element in an array - HW
+9. Pattern Program
+
+*
+**
+***
+****
+*****
+================================
+*****
+****
+***
+**
+*
+================================
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+================================
+1
+23
+456
+78910
+================================
+A
+BB
+CCC
+DDDD
+EEEEE
+================================
+A
+BC
+DEF
+GHIJ
+KLMNO
+================================
+10. Subsequences of a String
+11. Permutation of a String - HW
+12. Stair Climb
+13. Dice Game
+14. Tower of Hanoi
+
+================================
+
+Backtracking
+- NQueen Problem
+- Count Maze Path
+- Generate Parantheses : https://leetcode.com/problems/generate-parentheses/
+- Sudoku
+- Word Search
+- Permutations
+
+================================
+
+DP - Dynamic Programming
+- Entirely Depends on Recursion
+- we have 2 major problems in recursion:
+  - Overlapping Sub-Problem
+  - Sub-structure property
+    - f(n-1) + f(n-2)
+
+Ways to solve using DP
+- Memoization - Top Down Approach
+- Tabulation  - Bottom Up Approach
+
+Fibonacci Series
+Dice Game
+Pascal Triangle
+LCS - Longest Common Subsequence
+Knapsack Problem
+MCP - Minimum Cost Path
+Coin Change
+ - arr = [1,2,5]
+ - amount = 11
+ - o/p = 3
+
+================================
+
+Linked List
+- linked list contains nodes
+- Node contains 2 things
+  - Data - value of the node
+  - Next Pointer - address of the next node
+
+- Insertion in a linked list at beginning
+
+- Find Mid Point
+- Detect Loop in a Linked List
+- Find nth node from end of a linked list
+
+Doubly Linked List
+
+Stack
+- linear data structure
+- LIF0 - Last In First Out
+
+Push - add item in stack
+Pop  - remove item from stack
+Peek - return top element of the stack
+isEmpty - check if stack is empty or not
+
+- Stack CRUD Operations
+- Balanced Parantheses
+    i/p : str = "{()[]}[]";
+    o/p : balanced
+
+Implement two stack in an array
+Implement K Stack in an array
+
+Next Greater Element
+Next Smaller Element
+Prev Greater Element
+Prev Smaller Element
+
+Infix to Postfix
+Infix to Prefix
+
+================================
+
+Queue
+- FIFO - First in First Out
+- Linear Data Strcuture
+
+Operations in Queue
+- Enqueue - add item in queue
+- Dequeue - remove item from the queue
+- Front - front item in queue
+- Rear - last item in queue
+
+1. Queue CRUD Operations
+2. Queue Using Linked List
+3. Queue Using Stack
+4. Reverse a Queue - Iterative / Recursion
+5. Reverse first k elements in a queue
+
+Dequeue - Double Ended Queue
+
+Operations in Dequeue
+- insertFront
+- insertLast
+- deleteFront
+- deleteLast
+
+- getFront
+- getRear
+
+================================
+Tree Data structure
+- non-linear data structure
+- every node is connected to some other n number of nodes
+
+Basic Terminologies
+- Root - first node of the tree
+- Edge - a link b/w two nodes
+- Leaf - terminating node, the node without child
+- Height of tree - total number of levels in tree
+
+Binary Tree
+- tree having atmost 2 children
+
+Traversing a tree
+- InOrder 
+    - Left, Root, Right
+    - 4,2,5,1,3
+- PreOrder
+    - Root, Left, Right
+    - 1,2,4,5,3
+- PostOrder
+    - Left, Right, Root
+    - 4,5,2,3,1
+
+Level Order Traversal
+Insertion in Binary Tree
+Deletion in Binary Tree - HW
+Find Height of a tree - HW
+LCA - Lowest Common Ancestor - HW
+
+View of a tree (Recursive + Iterative)
+- Left
+- Right View
+- Top
+- Bottom
+- Diagonal
+
+Vertical Traversal
+Boundary Traversal
+================================
+
+Graph
+- tree without hierarchy
+
+two main components of Graph
+- finite set of vertices also called as nodes
+- finite set of ordered pair of the form(u,v) known as edge.
+
+Graphs are used in
+- google map
+- networking, circuit networking
+- telephone network
+- social networking websites like Facebook, Linked In
+
+Two Type of Graph
+- Directed
+- Undirected
+
+Graph could be represented in two ways
+- Adjacency Matrix
+- Adjacency List
+
+Graph Traversal
+- BFS - Breadth First Search / Level Order Traversal
+- DFS - Depth First Search - HW
+
+Detect Cycle in a Graph - HW
+Detect Island / Count Islands
+Shortest Path
+- Dijkstra's Algorithm for Shortest Path in a Weighted Graph
+
+Prims for Shortest Path
